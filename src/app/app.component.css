@@ -1,0 +1,25 @@
+.logo.angular:hover {
+  filter: drop-shadow(0 0 2em #e32727);
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: auto;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}

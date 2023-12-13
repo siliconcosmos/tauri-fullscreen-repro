@@ -1,0 +1,55 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run start -- --port 1420",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist/tauri-fullscreen-repro"
+  },
+  "package": {
+    "productName": "tauri-fullscreen-repro",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "setAlwaysOnTop": true,
+        "setFullscreen": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.siliconcosmos.tauri-fullscreen-repro",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "label": "main",
+        "fullscreen": false,
+        "resizable": true,
+        "center": true,
+        "title": "tauri-fullscreen-repro",
+        "titleBarStyle": "Transparent",
+        "hiddenTitle": true,
+        "width": 800,
+        "height": 600,
+        "minWidth": 360,
+        "minHeight": 360
+      }
+    ]
+  }
+}
